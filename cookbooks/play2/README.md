@@ -14,6 +14,10 @@ https://github.com/playframework/Play20/wiki
 Changes
 =======
 
+## v0.2:
+
+* Change attribute name (play to play2)
+
 ## v0.1:
 
 * Released to github

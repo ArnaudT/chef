@@ -21,15 +21,15 @@ include_recipe "java"
 
 bash "build-play" do
     user "root"
-    cwd "#{node[:play][:path][:base]}/framework"
+    cwd "#{node[:play2][:path][:base]}/framework"
     code "./build clean publish-local"
     action :nothing
 end
 
 git "play.git" do
-    destination "#{node[:play][:path][:base]}"
-    repository  "#{node[:play][:repository]}"
-    revision node[:play][:revision]
+    destination "#{node[:play2][:path][:base]}"
+    repository  "#{node[:play2][:repository]}"
+    revision node[:play2][:revision]
     depth 1
     notifies :run, "bash[build-play]", :immediately
 end
